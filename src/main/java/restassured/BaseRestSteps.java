@@ -1,13 +1,9 @@
 package restassured;
 
-
 import cucumber.api.Scenario;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import util.BaseUtil;
-
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 
 public class BaseRestSteps extends BaseUtil{
 

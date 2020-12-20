@@ -29,7 +29,7 @@ public class MyObservatoryMobileAppSteps extends BaseCucumberSteps {
         String apkPath = pro.getProperty("hk.observatory.andriod.apk.path");
         String appPackage = pro.getProperty("hk.observatory.andriod.apk.package");
         String appActivity = pro.getProperty("hk.observatory.andriod.apk.activity");
-        String avd = pro.getProperty("android.avd=");
+        String avd = pro.getProperty("android.avd");
         androidDriver = baseUtil.createAndroidDriver(scn, avd, new URL(appiumUrl), apkPath, appPackage, appActivity);
         testContext().setAndroidDriver(androidDriver);
     }

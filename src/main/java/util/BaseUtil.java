@@ -7,6 +7,8 @@ import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
 import java.sql.Timestamp;
@@ -30,26 +32,15 @@ public class BaseUtil {
         scn.write(String.format("[%s]   %s", SDF.format(timestamp), message));
     }
 
-    public IOSDriver<IOSElement> createIosDriver(URL appiumUrl){
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone Simulator");
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.2");
-        capabilities.setCapability(MobileCapabilityType.APP, "./src/main/resources/locspc.app");
-        capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
-        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-        driver = new IOSDriver<IOSElement>(appiumUrl, capabilities);
-        return driver;
-    }
-
     public AppiumDriver createAndroidDriver(Scenario scn, String avd, URL appiumUrl, String apkPath, String appPackage, String appActivity){
         try {
+            File app = new File(apkPath);
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
             capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
             capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
             capabilities.setCapability("avd",avd);
-            capabilities.setCapability(MobileCapabilityType.APP, apkPath);
+            capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
             capabilities.setCapability("appPackage", appPackage);
             capabilities.setCapability("appActivity", appActivity);
             capabilities.setCapability("autoGrantPermissions", "true");
