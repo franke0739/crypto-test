@@ -3,9 +3,9 @@ package appium.mobileApp.pom.pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class NineDayForecastPageObject extends BasePageObjects{
+public class NineDayForecastPageObjects extends BasePageObjects{
 
-    public NineDayForecastPageObject(WebDriver androidDriver){super(androidDriver);}
+    public NineDayForecastPageObjects(WebDriver androidDriver){super(androidDriver);}
 
     public static By nineDayForecastContainerLocator = By.id("mainAppSevenDayView");
 

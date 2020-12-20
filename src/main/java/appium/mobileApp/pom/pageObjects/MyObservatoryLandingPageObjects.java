@@ -3,9 +3,9 @@ package appium.mobileApp.pom.pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class MyObservatoryLandingPageObject extends BasePageObjects{
+public class MyObservatoryLandingPageObjects extends BasePageObjects{
 
-    public MyObservatoryLandingPageObject(WebDriver androidDriver){super(androidDriver);}
+    public MyObservatoryLandingPageObjects(WebDriver androidDriver){super(androidDriver);}
 
     public static By closeReminderButtonLocator = By.id("btn_friendly_reminder_skip");
 

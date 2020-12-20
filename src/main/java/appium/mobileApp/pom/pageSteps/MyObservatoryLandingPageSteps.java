@@ -1,38 +1,38 @@
 package appium.mobileApp.pom.pageSteps;
 
 import cucumber.api.Scenario;
-import appium.mobileApp.pom.pageObjects.MyObservatoryLandingPageObject;
+import appium.mobileApp.pom.pageObjects.MyObservatoryLandingPageObjects;
 import org.openqa.selenium.WebDriver;
 
-public class MyObservatoryLandingPageSteps extends BasePageSteps<MyObservatoryLandingPageObject>{
+public class MyObservatoryLandingPageSteps extends BasePageSteps<MyObservatoryLandingPageObjects>{
     public MyObservatoryLandingPageSteps(WebDriver androidDriver, Scenario scn){super(androidDriver, scn);}
 
     public void waitReminderDialogToLoad(){
-        waitForVisibilityOf(MyObservatoryLandingPageObject.reminderDialogLocator, "MyObservatoryLandingPageObject.reminderDialogLocator");
-        waitForVisibilityOf(MyObservatoryLandingPageObject.closeReminderButtonLocator, "MyObservatoryLandingPageObject.closeReminderButtonLocator");
+        waitForVisibilityOf(MyObservatoryLandingPageObjects.reminderDialogLocator, "MyObservatoryLandingPageObjects.reminderDialogLocator");
+        waitForVisibilityOf(MyObservatoryLandingPageObjects.closeReminderButtonLocator, "MyObservatoryLandingPageObjects.closeReminderButtonLocator");
     }
 
     public void clickCloseReminderButton(){
-        click(MyObservatoryLandingPageObject.closeReminderButtonLocator, "MyObservatoryLandingPageObject.closeReminderButtonLocator");
+        click(MyObservatoryLandingPageObjects.closeReminderButtonLocator, "MyObservatoryLandingPageObjects.closeReminderButtonLocator");
     }
 
     public void waitLandingPageToLoad(){
-        waitForVisibilityOf(MyObservatoryLandingPageObject.navigateHamburgerButtonLocator, "MyObservatoryLandingPageObject.navigateHamburgerButton");
-        waitForVisibilityOf(MyObservatoryLandingPageObject.radarButtonLocator, "MyObservatoryLandingPageObject.radarButton");
-        waitForVisibilityOf(MyObservatoryLandingPageObject.satelliteButtonLocator, "MyObservatoryLandingPageObject.satelliteButton");
-        waitForVisibilityOf(MyObservatoryLandingPageObject.weatherButtonLocator, "MyObservatoryLandingPageObject.weatherButton");
+        waitForVisibilityOf(MyObservatoryLandingPageObjects.navigateHamburgerButtonLocator, "MyObservatoryLandingPageObjects.navigateHamburgerButtonLocator");
+        waitForVisibilityOf(MyObservatoryLandingPageObjects.radarButtonLocator, "MyObservatoryLandingPageObjects.radarButtonLocator");
+        waitForVisibilityOf(MyObservatoryLandingPageObjects.satelliteButtonLocator, "MyObservatoryLandingPageObjects.satelliteButtonLocator");
+        waitForVisibilityOf(MyObservatoryLandingPageObjects.weatherButtonLocator, "MyObservatoryLandingPageObjects.weatherButtonLocator");
     }
 
     public void clickHamburgerButton(){
-        click(MyObservatoryLandingPageObject.navigateHamburgerButtonLocator, "MyObservatoryLandingPageObject.navigateHamburgerButton");
+        click(MyObservatoryLandingPageObjects.navigateHamburgerButtonLocator, "MyObservatoryLandingPageObjects.navigateHamburgerButtonLocator");
     }
 
     public void waitLeftDrawerToLoad(){
-        waitForVisibilityOf(MyObservatoryLandingPageObject.leftDrawerLocator, "MyObservatoryLandingPageObject.leftDrawer");
+        waitForVisibilityOf(MyObservatoryLandingPageObjects.leftDrawerLocator, "MyObservatoryLandingPageObjects.leftDrawerLocator");
     }
 
     public void clickNineDayForecastButton(){
-        click(MyObservatoryLandingPageObject.nineDayForecastButtonLocator, "MyObservatoryLandingPageObject.nineDayForecastButton");
+        click(MyObservatoryLandingPageObjects.nineDayForecastButtonLocator, "MyObservatoryLandingPageObjects.nineDayForecastButtonLocator");
     }
 
 }

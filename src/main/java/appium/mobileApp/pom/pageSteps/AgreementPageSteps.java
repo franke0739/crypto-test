@@ -1,19 +1,19 @@
 package appium.mobileApp.pom.pageSteps;
 
-import appium.mobileApp.pom.pageObjects.AgreementPageObject;
+import appium.mobileApp.pom.pageObjects.AgreementPageObjects;
 import cucumber.api.Scenario;
 import org.openqa.selenium.WebDriver;
 
-public class AgreementPageSteps extends BasePageSteps<AgreementPageObject> {
+public class AgreementPageSteps extends BasePageSteps<AgreementPageObjects> {
     public AgreementPageSteps(WebDriver androidDriver, Scenario scn){ super(androidDriver, scn); }
 
     public void waitAgreementPageToLoad() {
-        waitForVisibilityOf(AgreementPageObject.agreeButtonLocator,"AgreementPageObject.agreeButtonLocator");
-        waitForVisibilityOf(AgreementPageObject.disagreeButtonLocator,"AgreementPageObject.disagreeButtonLocator");
+        waitForVisibilityOf(AgreementPageObjects.agreeButtonLocator,"AgreementPageObjects.agreeButtonLocator");
+        waitForVisibilityOf(AgreementPageObjects.disagreeButtonLocator,"AgreementPageObjects.disagreeButtonLocator");
     }
 
     public void clickAgreeButton(){
-        click(AgreementPageObject.agreeButtonLocator,"AgreementPageObject.agreeButtonLocator");
+        click(AgreementPageObjects.agreeButtonLocator,"AgreementPageObjects.agreeButtonLocator");
     }
 
 }

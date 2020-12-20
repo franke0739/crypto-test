@@ -3,9 +3,9 @@ package appium.mobileApp.pom.pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class AgreementPageObject extends BasePageObjects {
+public class AgreementPageObjects extends BasePageObjects {
 
-    public AgreementPageObject(WebDriver androidDriver){super(androidDriver);}
+    public AgreementPageObjects(WebDriver androidDriver){super(androidDriver);}
 
     public static By agreeButtonLocator = By.id("btn_agree");
 
